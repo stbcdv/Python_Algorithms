@@ -1,8 +1,8 @@
-# Implementing Newton Raphson method in Python
+# Implementing Newton Raphson method in Python 牛顿-拉夫森迭代法
 # Author: Syed Haseeb Shah (github.com/QuantumNovice)
 # The Newton-Raphson method (also known as Newton's method) is a way to
 # quickly find a good approximation for the root of a real-valued function
-from decimal import Decimal
+from decimal import Decimal # 针对浮点数精度
 from math import *  # noqa: F401, F403
 from typing import Union
 
@@ -22,6 +22,8 @@ def newton_raphson(
     >>> newton_raphson("log(x)- 1", 2)
     2.718281828458938
     """
+
+    # eval() 用来执行一个字符串表达式，并返回表达式的值
     x = a
     while True:
         x = Decimal(x) - (Decimal(eval(func)) / Decimal(eval(str(diff(func)))))

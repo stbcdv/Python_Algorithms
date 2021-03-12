@@ -1,7 +1,7 @@
 """Newton's Method."""
 
 # Newton's Method - https://en.wikipedia.org/wiki/Newton%27s_method
-from typing import Callable
+from typing import Callable #typing库是一个帮助我们实现类型注解的库
 
 RealFunc = Callable[[float], float]  # type alias for a real -> real function
 
